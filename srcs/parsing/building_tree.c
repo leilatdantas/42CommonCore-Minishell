@@ -6,12 +6,11 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 21:46:42 by lebarbos          #+#    #+#             */
-/*   Updated: 2024/06/14 17:48:12 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:09:36 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-/*CONSTRUCTORS*/
 
 /*Select the right parameters to build the redir node and calls it.*/
 t_cmd	*parse_redir(t_shell *sh, t_cmd *cmd)

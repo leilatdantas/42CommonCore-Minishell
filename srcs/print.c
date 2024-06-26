@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 12:54:33 by lebarbos          #+#    #+#             */
-/*   Updated: 2024/06/14 16:47:07 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:14:17 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,15 @@ void	print_arrays(char **paths)
 	}
 }
 
+/**
+ * The function `print_env` iterates through a linked list of environment variables and prints out the
+ * key-value pairs for visibl Invalid color format. Use #RGB, #RGBA, #RRGGBB or #RRGGBBAA.e variables.
+ * 
+ * @param sh The `print_env` function takes a pointer to a `t_shell` struct as a parameter. This struct
+ * likely contains information related to the shell environment, such as a linked list (`env_lst`) of
+ * environment variables (`t_env`). The function iterates through the linked list and prints out the
+ * key
+ */
 void	print_env(t_shell *sh)
 {
 	t_env	*env_content;

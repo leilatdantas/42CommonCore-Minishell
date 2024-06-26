@@ -6,12 +6,22 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 16:14:55 by lebarbos          #+#    #+#             */
-/*   Updated: 2024/06/16 13:36:37 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:27:25 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
+/**
+ * The function `read_and_join_input` reads user input, trims whitespace, joins it with existing input, and returns the result.
+ * 
+ * @param join The `join` parameter is a pointer to a character array that is used to store the 
+ * concatenated input strings. The function reads a new input string, trims any leading or 
+ * trailing whitespace characters, concatenates it with the existing `join` string.
+ * @return The function `read_and_join_input` is returning the `join` 
+ * variable after reading input from the user, trimming whitespace, 
+ * and joining the input with the existing `join` string.
+ */
 char	*read_and_join_input(char *join)
 {
 	char	*ret;
@@ -51,6 +61,15 @@ char	*open_pipe(t_shell *sh, char *input)
 	return (join);
 }
 
+/**
+ * The function `handle_input` trims the input, validates its syntax, and either opens a pipe or duplicates the trimmed input.
+ * 
+ * @param sh t_shell structure which contains information about the shell environment and configuration
+ * @param input The `handle_input` function takes a pointer to a `t_shell` struct and a character pointer `input` as parameters. 
+ * The function first trims the input by removing leading and trailing whitespace characters and tabs using the `ft_strtrim` function.
+ * 
+ * @return The function `handle_input` returns a `char*` value, which can be either `NULL` or a pointer to a string.
+ */
 char	*handle_input(t_shell *sh, char *input)
 {
 	char	*trimmed_input;

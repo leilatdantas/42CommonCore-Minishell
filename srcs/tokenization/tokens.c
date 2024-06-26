@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:13:59 by lebarbos          #+#    #+#             */
-/*   Updated: 2024/06/10 17:49:54 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/06/26 19:19:21 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,16 @@ void	get_token_state(t_token *token)
 		token->state = GENERAL;
 }
 
+/**
+ * The function `end_word` sets the end index of a word in a given input string 
+ * based on certain conditions.
+ * 
+ * @param sh A pointer to a structure named t_shell, which likely contains information about 
+ * the shell environment and configuration.
+ * @param input The `input` parameter in the `end_word` function is a character array or 
+ * string that contains the input text being processed. 
+ * It is used to determine the end of a word within the input text.
+ */
 void	end_word(t_shell *sh, char *input)
 {
 	sh->index->end = sh->index->start;
@@ -60,6 +70,16 @@ void	end_word(t_shell *sh, char *input)
 		search_word(input, &sh->index->end);
 }
 
+/**
+ * The function `fill_token_lst` parses input string and creates tokens based on whitespace 
+ * and word boundaries.
+ * 
+ * @param sh The `sh` parameter is a pointer to a `t_shell` struct, which likely contains 
+ * information and settings related to the shell environment.
+ * @param input The `fill_token_lst` function takes a `t_shell` structure pointer `sh` and a 
+ * character pointer `input` as parameters. The function processes the input string character by 
+ * character to create tokens and add them to a linked list `token_lst` within the `t_shell` structure.
+ */
 void	fill_token_lst(t_shell *sh, char *input)
 {
 	t_token	*node_content;
