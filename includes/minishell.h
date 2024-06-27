@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:57:58 by uviana-a          #+#    #+#             */
-/*   Updated: 2024/06/15 20:00:54 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/06/26 20:01:30 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@
 # define YELLOW "\x1b[38;5;184;1m"
 # define BLUE_BG "\033[38;5;159;48;5;16;1m"
 # define COLOR_RESET "\033[0m"
+
+#define PROMPT "\x1b[38;5;213mM\x1b[38;5;165mI\x1b[38;5;213mN\x1b[38;5;165mI\
+\x1b[38;5;213mS\x1b[38;5;165mH\x1b[38;5;213mE\x1b[38;5;165mL\x1b[0m \
+\x1b[38;5;117;1m➜\x1b[0m "
 
 //ERROR MESSAGES
 # define SYNTAX_PIPE "minishell: syntax error near unexpected token `|'"
@@ -170,7 +174,6 @@ typedef struct s_shell
 }	t_shell;
 
 // MACROS
-# define PROMPT "MINISHELL ➜ "
 # define OPERATOR "|<>"
 # define OUTOFSCOPE "!()*;&"
 # define OUTOFSCOPE "!()*;&"

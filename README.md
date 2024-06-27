@@ -28,26 +28,24 @@ To install and run Minishell, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/minishell.git
-Navigate to the project directory:
-
+   ```
+2. **Navigate to the project directory:**
    ```bash
    cd minishell
-
-Build the project:
+   ```
+3. **Build the project:**
    ```bash
    make
+   ```
 ## Usage
 After building the project, you can start the shell by running:
-
-sh
-
-./minishell
-
+   
+   ```bash
+   ./minishell
+   ```
 Once inside the shell, you can type commands just like you would in a regular UNIX shell. For example:
-
-sh
-
-minishell$ ls -l
+   ```bash
+   MINISHELL ls -l
 minishell$ cd /path/to/directory
 minishell$ echo "Hello, world!"
 minishell$ cat file.txt | grep "pattern"
