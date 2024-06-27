@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:57:58 by uviana-a          #+#    #+#             */
-/*   Updated: 2024/06/27 12:35:59 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/06/27 13:30:42 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,36 @@
 # include <readline/history.h>
 # include "../libraries/libft/libft.h"
 
-//COLORS
-# define ROSE "\x1b[38;207;1m"
-# define ROSE_2 "\x1b[38;5;177;1m"
-# define LIGHTGREEN "\x1b[38;5;155;1m"
-# define LIGHTBLUE "\x1b[38;5;39;1m"
-# define LIGHTPURPLE "\x1b[38;5;63;1m"
-# define PURPLE "\x1b[38;5;135;1m"
-# define PINK "\x1b[38;5;199;1m"
-# define RED "\x1b[38;5;160;1m"
-# define ORANGE "\x1b[38;5;172;1m"
-# define YELLOW "\x1b[38;5;184;1m"
-# define BLUE_BG "\033[38;5;159;48;5;16;1m"
-# define COLOR_RESET "\033[0m"
+// COLORS
+#define BLACK "\x1b[30m"
+#define RED "\x1b[31m"
+#define GREEN "\x1b[32m"
+#define YELLOW "\x1b[33m"
+#define BLUE "\x1b[34m"
+#define MAGENTA "\x1b[35m"
+#define CYAN "\x1b[36m"
+#define WHITE "\x1b[37m"
+#define RESET "\x1b[0m"
 
-# define PROMPT "\x1b[38;5;213mM\x1b[38;5;165mI\x1b[38;5;213mN\x1b[38;5;165mI\
-\x1b[38;5;213mS\x1b[38;5;165mH\x1b[38;5;213mE\x1b[38;5;165mL\x1b[38;5;213mL\
-\x1b[0m \x1b[38;5;117;1m➜\x1b[0m "
+
+// //COLORS
+// # define ROSE "\x1b[38;207;1m"
+// # define ROSE_2 "\x1b[38;5;177;1m"
+// # define LIGHTGREEN "\x1b[38;5;155;1m"
+// # define LIGHTBLUE "\x1b[38;5;39;1m"
+// # define LIGHTPURPLE "\x1b[38;5;63;1m"
+// # define PURPLE "\x1b[38;5;135;1m"
+// # define PINK "\x1b[38;5;199;1m"
+// # define RED "\x1b[38;5;160;1m"
+// # define ORANGE "\x1b[38;5;172;1m"
+// # define YELLOW "\x1b[38;5;184;1m"
+// # define BLUE_BG "\033[38;5;159;48;5;16;1m"
+// # define COLOR_RESET "\033[0m"
+
+
+
+// # define PROMPT "\x1b[95mM\x1b[35mI\x1b[95mN\x1b[35mI\
+// \x1b[95mS\x1b[35mH\x1b[95mE\x1b[35mL\x1b[95mL ->\x1b[0m "
 
 //ERROR MESSAGES
 # define SYNTAX_PIPE "minishell: syntax error near unexpected token `|'"
@@ -171,6 +184,7 @@ typedef struct s_shell
 	t_cmd		*cmd;
 	char		**paths;
 	char		**envp;
+	char		*input;
 }	t_shell;
 
 // MACROS

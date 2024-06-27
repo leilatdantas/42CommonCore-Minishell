@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 16:14:55 by lebarbos          #+#    #+#             */
-/*   Updated: 2024/06/26 19:49:18 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/06/27 13:32:33 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char	*get_line(t_shell *sh)
 {
 	char	*input;
 
-	input = readline(PROMPT);
+	input = readline("minishell: ");
 	if (!input)
 	{
 		write(1, "exit\n", 5);
