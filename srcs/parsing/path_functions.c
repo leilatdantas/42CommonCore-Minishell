@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 21:42:37 by lebarbos          #+#    #+#             */
-/*   Updated: 2024/06/15 17:15:43 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/06/27 12:32:15 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,7 @@ char	*relative_path(t_shell *sh, char *command)
 char	*find_path(t_shell *sh, char *command)
 {
 	char	*path_command;
-	int		i;
 
-	i = 0;
 	path_command = NULL;
 	if (!command || !*command)
 		return (NULL);
